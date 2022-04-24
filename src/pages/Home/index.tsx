@@ -40,8 +40,6 @@ const Home = (): JSX.Element => {
         ...product,
         priceFormartted: formatPrice(product.price)
       }))
-
-
     }
 
     loadProducts()
@@ -55,10 +53,7 @@ const Home = (): JSX.Element => {
     <ProductList>
       {products.map(product => (
         <li key={product.id}>
-          <img
-            src={product.image}
-            alt={product.title}
-          />
+          <img src={product.image} alt={product.title} />
           <strong>{product.title}</strong>
           <span>{product.priceFormatted}</span>
           <button
